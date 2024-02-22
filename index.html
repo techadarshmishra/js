@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .main {
+            height: 510px;
+            width: 800px;
+            background-image: url(starlink.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 10vh auto;
+            border-radius: 20px;
+        }
+        
+        .left {
+            height: 510px;
+            width: 245px;
+            background-color: transparent;
+            float: left;
+            border: 1px solid;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        
+        .right {
+            height: 510px;
+            width: 555px;
+            background-color: transparent;
+            float: right;
+            border: 1px solid;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        .vcard {
+            height: 200px;
+            width: 445px;
+            margin: 24vh auto;
+            border: 1px solid transparent;
+            border-radius: 20px;
+        }
+        
+        .logo {
+            height: 150px;
+            width: 150px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin-top: 5%;
+            margin-left: 59%;
+        }
+        
+        h1 {
+            color: white;
+            background-color: #404040;
+            border-top-left-radius: 20px;
+        }
+        
+        h2 {
+            color: white;
+            background-color: #404040;
+        }
+        
+        .left ul {
+            display: flex;
+            gap: 6%;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .left ul li {
+            list-style: none;
+            height: 43px;
+            width: 60px;
+            border: 1px solid;
+            border-radius: 10%;
+            margin-top: 1%;
+            margin-right: 1%;
+            margin-bottom: 1%;
+            margin-left: 3%;
+            box-shadow: 1px 2px 2px red;
+        }
+        
+        .left ul li img {
+            list-style: none;
+            height: 40px;
+            width: 58px;
+        }
+        
+        #img {
+            position: absolute;
+            left: 42.5%;
+            top: 40%;
+            width: 445px;
+            height: 200px;
+            border-radius: 20px;
+        }
+        
+        #txt {
+            height: 150px;
+            width: 100px;
+            position: absolute;
+            top: 48%;
+            left: 43%;
+        }
+        
+        #logo {
+            position: absolute;
+            left: 62%;
+            top: 42%;
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+        }
+        
+        span {
+            background-color: #404040;
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            margin-left: 14%;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <h2>background image</h2>
+            <ul>
+                <li onclick="document.getElementById('img').src='vcimg1.jpg'"><img src="vcimg1.jpg"></li>
+                <li onclick="document.getElementById('img').src='vcimg2.jpg'"><img src="vcimg2.jpg"></li>
+                <li onclick="document.getElementById('img').src='vcimg3.jpg'"><img src="vcimg3.jpg"></li>
+                <li onclick="document.getElementById('img').src='vcimg4.jpg'"><img src="vcimg4.jpg"></li>
+                <li onclick="document.getElementById('img').src='vcimg5.jpg'"><img src="vcimg5.jpg"></li>
+                <li onclick="document.getElementById('img').src='vcimg6.jpg'"><img src="vcimg6.jpg"></li>
+            </ul>
+            <h2>Logo Background</h2>
+            <ul>
+                <li onclick="document.getElementById('logo').src='cimg1.jpg'"><img src="cimg1.jpg"></li>
+                <li onclick="document.getElementById('logo').src='cimg2.jpg'"><img src="cimg2.jpg"></li>
+                <li onclick="document.getElementById('logo').src='cimg3.jpg'"><img src="cimg3.jpg"></li>
+                <li onclick="document.getElementById('logo').src='cimg4.jpg'"><img src="cimg4.jpg"></li>
+                <li onclick="document.getElementById('logo').src='cimg5.jpg'"><img src="cimg5.jpg"></li>
+                <li onclick="document.getElementById('logo').src='cimg6.jpg'"><img src="cimg6.jpg"></li>
+            </ul>
+            <h2>Text Color</h2>
+            <ul>
+                <li onclick="document.getElementById('txt').style.color='red'" style="background-color: red;"></li>
+                <li onclick="document.getElementById('txt').style.color='blue'" style="background-color: blue;"></li>
+                <li onclick="document.getElementById('txt').style.color='green'" style="background-color: green;"></li>
+                <li onclick="document.getElementById('txt').style.color='orange'" style="background-color: orange;"></li>
+                <li onclick="document.getElementById('txt').style.color='gray'" style="background-color: gray;"></li>
+                <li onclick="document.getElementById('txt').style.color='teal'" style="background-color: teal;"></li>
+
+            </ul>
+            <h2>Font size</h2>
+            <ul>
+                <li onclick="document.getElementById('txt').style.fontSize='large'" style="color: white;">Large</li>
+                <li onclick="document.getElementById('txt').style.fontSize='medium'" style="color: white;">medium</li>
+                <li onclick="document.getElementById('txt').style.fontSize='small'" style="color: white;">Small</li>
+                <li onclick="document.getElementById('txt').style.fontSize='x-large'" style="color: white;">X-Large</li>
+                <li onclick="document.getElementById('txt').style.fontSize='x-small'" style="color: white;">X-small</li>
+                <li onclick="document.getElementById('txt').style.fontSize='xx-large'" style="color: white;">XX-Large</li>
+            </ul>
+        </div>
+        <div class="right">
+            <span>Customization Visiting Crad</span>
+            <div class="vcard">
+                <div class="logo"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.write('<img src="vcimg1.jpg" alt="banner" id="img" height="250px" width="31%">')
+
+        document.write('<img src="cimg1.jpg" alt="banner" id="logo" height="150px" width="150px">')
+
+
+        document.write('<h3 id="txt">NAME:Adarsh<br><br>Contact:844886XXXX<br><br>EMAIL:adarshmishra3328@gmail.com</h3>')
+    </script>
+
+</body>
+
+</html>
